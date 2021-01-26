@@ -1,3 +1,5 @@
+// https://flutter.dev/docs/cookbook/design/snackbars
+
 import 'package:flutter/material.dart';
 
 class SampleSnackbar extends StatelessWidget {
