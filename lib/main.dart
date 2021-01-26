@@ -1,3 +1,4 @@
+import 'package:cookbook_flutter/design/add_snackbar.dart';
 import 'package:flutter/material.dart';
 
 /*Animations */
@@ -7,7 +8,8 @@ import 'package:flutter/material.dart';
 //import 'animation/fade_widget.dart';
 
 /*Design */
-import 'design/add_drawer.dart';
+//import 'design/add_drawer.dart';
+import 'design/add_snackbar.dart';
 
 main() {
   runApp(MaterialApp(
@@ -20,6 +22,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return SampleDrawer(title: appTitle);
+    //  return SampleSnackbar();
+    return MaterialApp(
+      title: 'SnackBar Demo',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('SnackBar Demo'),
+        ),
+        body: SampleSnackbar(),
+      ),
+    );
   }
 }
