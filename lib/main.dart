@@ -14,7 +14,8 @@ import 'package:flutter/material.dart';
 //import 'design/export_font.dart';
 //import 'design/add_orientationbuilder.dart';
 //import 'design/custom_font.dart';
-import 'design/custom_themes.dart';
+//import 'design/custom_themes.dart';
+import 'design/add_tabs.dart';
 
 main() {
   // runApp(MaterialApp(
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return CustomTheme();
+    return SampleTabBar();
+
     // return MaterialApp(
     //   title: appTitle,
     //   theme: ThemeData(
