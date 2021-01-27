@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+//import 'package:google_fonts/google_fonts.dart';
+//import 'package:flutter/foundation.dart';
 
 /*Animations */
 //import 'animation/page_route_transition.dart';
@@ -12,12 +13,14 @@ import 'package:google_fonts/google_fonts.dart';
 //import 'design/add_snackbar.dart';
 //import 'design/export_font.dart';
 //import 'design/add_orientationbuilder.dart';
-import 'design/custom_font.dart';
+//import 'design/custom_font.dart';
+import 'design/custom_themes.dart';
 
 main() {
-  runApp(MaterialApp(
-    home: MyApp(),
-  ));
+  // runApp(MaterialApp(
+  //   home: MyApp(),
+  // ));
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -25,13 +28,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    //  return SampleSnackbar();
-    return MaterialApp(
-      title: appTitle,
-      theme: ThemeData(
-        textTheme: GoogleFonts.ralewayTextTheme(Theme.of(context).textTheme),
-      ),
-      home: CustomFont(),
-    );
+    return CustomTheme();
+    // return MaterialApp(
+    //   title: appTitle,
+    //   theme: ThemeData(
+    //     textTheme: GoogleFonts.ralewayTextTheme(Theme.of(context).textTheme),
+    //   ),
+    //   home: CustomFont(),
+    // );
   }
 }
