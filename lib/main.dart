@@ -10,7 +10,8 @@ import 'package:flutter/material.dart';
 /*Design */
 //import 'design/add_drawer.dart';
 //import 'design/add_snackbar.dart';
-import 'design/export_font.dart';
+//import 'design/export_font.dart';
+import 'design/add_orientationbuilder.dart';
 
 main() {
   runApp(MaterialApp(
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('SnackBar Demo'),
         ),
-        body: SampleFont(),
+        body: SampleOrientation(),
       ),
     );
   }
