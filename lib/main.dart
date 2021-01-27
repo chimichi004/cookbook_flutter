@@ -9,7 +9,8 @@ import 'package:flutter/material.dart';
 
 /*Design */
 //import 'design/add_drawer.dart';
-import 'design/add_snackbar.dart';
+//import 'design/add_snackbar.dart';
+import 'design/export_font.dart';
 
 main() {
   runApp(MaterialApp(
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('SnackBar Demo'),
         ),
-        body: SampleSnackbar(),
+        body: SampleFont(),
       ),
     );
   }
