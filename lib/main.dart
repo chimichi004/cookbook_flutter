@@ -20,7 +20,10 @@ import 'package:google_fonts/google_fonts.dart';
 /*Forms */
 //import 'forms/form_validation.dart';
 //import 'forms/form_custom.dart';
-import 'forms/textfield_focus.dart';
+//import 'forms/textfield_focus.dart';
+
+/*Gestures */
+import 'gestures/touch_ripples.dart';
 
 main() {
   // runApp(MaterialApp(
@@ -41,7 +44,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.ralewayTextTheme(Theme.of(context).textTheme),
       ),
-      home: TextFieldFocus(),
+      home: TouchRipples(),
     );
   }
 }
