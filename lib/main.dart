@@ -23,7 +23,8 @@ import 'package:google_fonts/google_fonts.dart';
 //import 'forms/textfield_focus.dart';
 
 /*Gestures */
-import 'gestures/gestures.dart';
+//import 'gestures/gestures.dart';
+import 'gestures/swipe_dismiss.dart';
 
 main() {
   // runApp(MaterialApp(
@@ -37,14 +38,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    //return SampleForm();
+    return SwipeDismiss();
 
-    return MaterialApp(
-      title: appTitle,
-      theme: ThemeData(
-        textTheme: GoogleFonts.ralewayTextTheme(Theme.of(context).textTheme),
-      ),
-      home: SampleGestures(),
-    );
+    // return MaterialApp(
+    //   title: appTitle,
+    //   theme: ThemeData(
+    //     textTheme: GoogleFonts.ralewayTextTheme(Theme.of(context).textTheme),
+    //   ),
+    //   home: SampleGestures(),
+    // );
   }
 }
