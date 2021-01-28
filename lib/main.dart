@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
 //import 'package:flutter/foundation.dart';
 
 /*Animations */
@@ -15,7 +15,10 @@ import 'package:flutter/material.dart';
 //import 'design/add_orientationbuilder.dart';
 //import 'design/custom_font.dart';
 //import 'design/custom_themes.dart';
-import 'design/add_tabs.dart';
+//import 'design/add_tabs.dart';
+
+/*Forms */
+import 'forms/form_validation.dart';
 
 main() {
   // runApp(MaterialApp(
@@ -29,14 +32,19 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return SampleTabBar();
+    //return SampleForm();
 
-    // return MaterialApp(
-    //   title: appTitle,
-    //   theme: ThemeData(
-    //     textTheme: GoogleFonts.ralewayTextTheme(Theme.of(context).textTheme),
-    //   ),
-    //   home: CustomFont(),
-    // );
+    return MaterialApp(
+      title: appTitle,
+      theme: ThemeData(
+        textTheme: GoogleFonts.ralewayTextTheme(Theme.of(context).textTheme),
+      ),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Sample Form Demo'),
+        ),
+        body: SampleForm(),
+      ),
+    );
   }
 }
