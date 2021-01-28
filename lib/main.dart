@@ -23,7 +23,7 @@ import 'package:google_fonts/google_fonts.dart';
 //import 'forms/textfield_focus.dart';
 
 /*Gestures */
-import 'gestures/touch_ripples.dart';
+import 'gestures/gestures.dart';
 
 main() {
   // runApp(MaterialApp(
@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.ralewayTextTheme(Theme.of(context).textTheme),
       ),
-      home: TouchRipples(),
+      home: SampleGestures(),
     );
   }
 }
