@@ -1,4 +1,5 @@
 // https://flutter.dev/docs/cookbook/forms/text-field-changes
+// https://flutter.dev/docs/cookbook/forms/retrieve-input
 
 import 'package:flutter/material.dart';
 
@@ -52,6 +53,24 @@ class _CustomFormState extends State<CustomForm> {
             )
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        // When the user presses the button, show an alert dialog containing
+        // the text that the user has entered into the text field.
+        onPressed: () {
+          return showDialog(
+            context: context,
+            builder: (context) {
+              return AlertDialog(
+                // Retrieve the text the that user has entered by using the
+                // TextEditingController.
+                content: Text(myController.text),
+              );
+            },
+          );
+        },
+        tooltip: 'Show me the value',
+        child: Icon(Icons.text_fields),
       ),
     );
   }
