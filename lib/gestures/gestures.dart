@@ -8,7 +8,7 @@ class SampleGestures extends StatelessWidget {
         title: Text('Touch ripples'),
       ),
       body: Center(
-        child: HandleTaps(),
+        child: HandleTaps(), //TouchRipples()
       ),
     );
   }
