@@ -18,7 +18,8 @@ import 'package:google_fonts/google_fonts.dart';
 //import 'design/add_tabs.dart';
 
 /*Forms */
-import 'forms/form_validation.dart';
+//import 'forms/form_validation.dart';
+import 'forms/form_custom.dart';
 
 main() {
   // runApp(MaterialApp(
@@ -39,12 +40,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.ralewayTextTheme(Theme.of(context).textTheme),
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Sample Form Demo'),
-        ),
-        body: SampleForm(),
-      ),
+      home: CustomForm(),
     );
   }
 }
