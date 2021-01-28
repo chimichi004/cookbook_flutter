@@ -19,6 +19,5 @@ class CustomFont extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }
