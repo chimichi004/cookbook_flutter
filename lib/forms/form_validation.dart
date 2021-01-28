@@ -1,5 +1,5 @@
 // https://flutter.dev/docs/cookbook/forms/validation
-
+// https://flutter.dev/docs/cookbook/forms/text-input
 import 'package:flutter/material.dart';
 
 class SampleForm extends StatefulWidget {
@@ -23,6 +23,10 @@ class _SampleFormState extends State<SampleForm> {
         children: <Widget>[
           // Add TextFormFields and ElevatedButton here
           TextFormField(
+            decoration: InputDecoration(
+                border: InputBorder.none,
+                hintText: 'Input term',
+                labelText: 'Input something'),
             validator: (value) {
               if (value.isEmpty) {
                 return 'Please enter some text';
