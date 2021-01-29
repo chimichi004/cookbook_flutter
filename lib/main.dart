@@ -24,7 +24,10 @@ import 'package:google_fonts/google_fonts.dart';
 
 /*Gestures */
 //import 'gestures/gestures.dart';
-import 'gestures/swipe_dismiss.dart';
+//import 'gestures/swipe_dismiss.dart';
+
+/*Images */
+import 'images/image_display.dart';
 
 main() {
   // runApp(MaterialApp(
@@ -38,14 +41,19 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return SwipeDismiss();
+    //return SwipeDismiss();
 
-    // return MaterialApp(
-    //   title: appTitle,
-    //   theme: ThemeData(
-    //     textTheme: GoogleFonts.ralewayTextTheme(Theme.of(context).textTheme),
-    //   ),
-    //   home: SampleGestures(),
-    // );
+    return MaterialApp(
+      title: appTitle,
+      theme: ThemeData(
+        textTheme: GoogleFonts.ralewayTextTheme(Theme.of(context).textTheme),
+      ),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(appTitle),
+        ),
+        body: ImageDisplay(),
+      ),
+    );
   }
 }
