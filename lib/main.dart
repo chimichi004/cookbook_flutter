@@ -33,7 +33,8 @@ import 'package:google_fonts/google_fonts.dart';
 //import 'images/img_cache.dart';
 
 /*List */
-import 'list/list_standard.dart';
+//import 'list/list_standard.dart';
+import 'list/list_horizontal.dart';
 
 main() {
   // runApp(MaterialApp(
@@ -47,7 +48,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return StandardListView();
+    return HorizontalList();
 
     // return MaterialApp(
     //   title: appTitle,
