@@ -35,7 +35,8 @@ import 'package:google_fonts/google_fonts.dart';
 //import 'list/list_standard.dart';
 //import 'list/list_horizontal.dart';
 //import 'list/list_grid.dart';
-import 'list/list_custom.dart';
+//import 'list/list_custom.dart';
+import 'list/list_floating_appbar.dart';
 
 main() {
   // runApp(MaterialApp(
@@ -49,14 +50,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return CustomListView(
-      items: List<ListItem>.generate(
-        1000,
-        (i) => i % 6 == 0
-            ? HeadingItem("Heading $i")
-            : MessageItem("Sender $i", "Message Body $i"),
-      ),
-    );
+    return SampleFloatingAppbar();
+
+    // return CustomListView(
+    //   items: List<ListItem>.generate(
+    //     1000,
+    //     (i) => i % 6 == 0
+    //         ? HeadingItem("Heading $i")
+    //         : MessageItem("Sender $i", "Message Body $i"),
+    //   ),
+    // );
 
     // return MaterialApp(
     //   title: appTitle,
