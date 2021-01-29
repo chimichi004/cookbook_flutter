@@ -1,3 +1,4 @@
+import 'package:cookbook_flutter/images/img_fadein.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 //import 'package:flutter/foundation.dart';
@@ -27,7 +28,8 @@ import 'package:google_fonts/google_fonts.dart';
 //import 'gestures/swipe_dismiss.dart';
 
 /*Images */
-import 'images/image_display.dart';
+//import 'images/image_display.dart';
+import 'images/img_fadein.dart';
 
 main() {
   // runApp(MaterialApp(
@@ -41,19 +43,19 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    //return SwipeDismiss();
+    return InMemoryFadeInImage();
 
-    return MaterialApp(
-      title: appTitle,
-      theme: ThemeData(
-        textTheme: GoogleFonts.ralewayTextTheme(Theme.of(context).textTheme),
-      ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(appTitle),
-        ),
-        body: ImageDisplay(),
-      ),
-    );
+    // return MaterialApp(
+    //   title: appTitle,
+    //   theme: ThemeData(
+    //     textTheme: GoogleFonts.ralewayTextTheme(Theme.of(context).textTheme),
+    //   ),
+    //   home: Scaffold(
+    //     appBar: AppBar(
+    //       title: Text(appTitle),
+    //     ),
+    //     body: ImageDisplay(),
+    //   ),
+    // );
   }
 }
