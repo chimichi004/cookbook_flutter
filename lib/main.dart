@@ -30,7 +30,10 @@ import 'package:google_fonts/google_fonts.dart';
 /*Images */
 //import 'images/img_display.dart';
 //import 'images/img_fadein.dart';
-import 'images/img_cache.dart';
+//import 'images/img_cache.dart';
+
+/*List */
+import 'list/list_standard.dart';
 
 main() {
   // runApp(MaterialApp(
@@ -44,7 +47,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return SampleCacheImage();
+    return StandardListView();
 
     // return MaterialApp(
     //   title: appTitle,
