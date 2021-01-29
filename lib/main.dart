@@ -34,7 +34,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 /*List */
 //import 'list/list_standard.dart';
-import 'list/list_horizontal.dart';
+//import 'list/list_horizontal.dart';
+import 'list/list_grid.dart';
 
 main() {
   // runApp(MaterialApp(
@@ -48,7 +49,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return HorizontalList();
+    return SampleGridListView();
 
     // return MaterialApp(
     //   title: appTitle,
