@@ -28,8 +28,9 @@ import 'package:google_fonts/google_fonts.dart';
 //import 'gestures/swipe_dismiss.dart';
 
 /*Images */
-//import 'images/image_display.dart';
-import 'images/img_fadein.dart';
+//import 'images/img_display.dart';
+//import 'images/img_fadein.dart';
+import 'images/img_cache.dart';
 
 main() {
   // runApp(MaterialApp(
@@ -43,7 +44,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return InMemoryFadeInImage();
+    return SampleCacheImage();
 
     // return MaterialApp(
     //   title: appTitle,

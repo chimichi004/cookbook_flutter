@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:transparent_image/transparent_image.dart';
 
-//Sample fetch image from an image link
+//Sample fetch image from an image network page-link
 class InMemoryFadeInImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class InMemoryFadeInImage extends StatelessWidget {
   }
 }
 
-//Sample fetch image from the asset* folder
+//Sample fetch image from the asset* network folder
 class AssetNetworkFadeInImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
