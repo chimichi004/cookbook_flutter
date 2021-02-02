@@ -36,7 +36,7 @@ class _SwipeDismissState extends State<SwipeDismiss> {
                 setState(() {
                   items.removeAt(index);
                 });
-                ScaffoldMessenger.of(context)
+                Scaffold.of(context)
                     .showSnackBar(SnackBar(content: Text("$item dismissed")));
               },
               background: Container(

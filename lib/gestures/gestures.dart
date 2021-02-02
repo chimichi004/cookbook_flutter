@@ -24,7 +24,7 @@ class HandleTaps extends StatelessWidget {
       onTap: () {
         final snackBar = SnackBar(content: Text("Tap"));
 
-        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+        Scaffold.of(context).showSnackBar(snackBar);
       },
       // The custom button
       child: Container(
@@ -47,7 +47,7 @@ class TouchRipples extends StatelessWidget {
     return InkWell(
       // When the user taps the button, show a snackbar.
       onTap: () {
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        Scaffold.of(context).showSnackBar(SnackBar(
           content: Text('Tap'),
         ));
       },

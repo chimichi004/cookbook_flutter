@@ -42,7 +42,7 @@ class _SampleFormState extends State<SampleForm> {
                 // otherwise.
                 if (_formKey.currentState.validate()) {
                   // If the form is valid, display a Snackbar.
-                  ScaffoldMessenger.of(context)
+                  Scaffold.of(context)
                       .showSnackBar(SnackBar(content: Text('Processing Data')));
                 }
               },
