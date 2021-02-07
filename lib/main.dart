@@ -43,8 +43,12 @@ import 'package:google_fonts/google_fonts.dart';
 /*Navigation */
 // import 'navigation/nav_hero/main_screen.dart';
 //import 'navigation/nav_routes/first_route.dart';
-import 'navigation/nav_name_routes/firstscreen.dart';
-import 'navigation/nav_name_routes/secondscreem.dart';
+//import 'navigation/nav_name_routes/firstscreen.dart';
+//import 'navigation/nav_name_routes/secondscreem.dart';
+import 'package:cookbook_flutter/navigation/nav_extract_routenames/extract_screen.dart';
+import 'package:cookbook_flutter/navigation/nav_extract_routenames/home_screen.dart';
+import 'package:cookbook_flutter/navigation/nav_extract_routenames/pass_screen.dart';
+import 'package:cookbook_flutter/navigation/nav_extract_routenames/screen_arguments.dart';
 
 main() {
   // runApp(MaterialApp(
@@ -83,18 +87,55 @@ class MyApp extends StatelessWidget {
     // );
 
     //SAMPLE ANIMATE NAVIGATE
+    // return MaterialApp(
+    //   title: 'Navigation Basics',
+    //   //home: FirstRoute(), //Comment this if using NavigationRoutes
+    //   // Start the app with the "/" named route. In this case, the app starts
+    //   // on the FirstScreen widget.
+    //   initialRoute: '/',
+    //   routes: {
+    //     // When navigating to the "/" route, build the FirstScreen widget.
+    //     '/': (context) => FirstScreen(),
+    //     // When navigating to the "/second" route, build the SecondScreen widget.
+    //     '/second': (context) => SecondScreen(),
+    //   },
+    // );
+
+    ///ADVANCE MATERIAL NAVIGATION
+    ///Pass arguments to a named route
     return MaterialApp(
-      title: 'Navigation Basics',
-      //home: FirstRoute(), //Comment this if using NavigationRoutes
-      // Start the app with the "/" named route. In this case, the app starts
-      // on the FirstScreen widget.
-      initialRoute: '/',
-      routes: {
-        // When navigating to the "/" route, build the FirstScreen widget.
-        '/': (context) => FirstScreen(),
-        // When navigating to the "/second" route, build the SecondScreen widget.
-        '/second': (context) => SecondScreen(),
-      },
-    );
+        // Provide a function to handle named routes. Use this function to
+        // identify the named route being pushed, and create the correct
+        // Screen.
+        onGenerateRoute: (settings) {
+          // If you push the PassArguments route
+          if (settings.name == PassArgumentsScreen.routeName) {
+            // Cast the arguments to the correct type: ScreenArguments.
+            final ScreenArguments args = settings.arguments;
+
+            // Then, extract the required data from the arguments and
+            // pass the data to the correct screen.
+            return MaterialPageRoute(
+              builder: (context) {
+                return PassArgumentsScreen(
+                  title: args.title,
+                  message: args.message,
+                );
+              },
+            );
+          }
+          // The code only supports PassArgumentsScreen.routeName right now.
+          // Other values need to be implemented if we add them. The assertion
+          // here will help remind us of that higher up in the call stack, since
+          // this assertion would otherwise fire somewhere in the framework.
+          assert(false, 'Need to implement ${settings.name}');
+          return null;
+        },
+        title: 'Navigation with Arguments',
+        home: HomeScreen(),
+        routes: {
+          ExtractArgumentsScreen.routeName: (context) =>
+              ExtractArgumentsScreen(),
+        });
   }
 }
