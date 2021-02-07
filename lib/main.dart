@@ -1,5 +1,3 @@
-import 'package:cookbook_flutter/navigation/nav_send_data/todo.dart';
-import 'package:cookbook_flutter/navigation/nav_send_data/todo_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 //import 'package:flutter/foundation.dart';
@@ -51,7 +49,9 @@ import 'package:google_fonts/google_fonts.dart';
 // import 'package:cookbook_flutter/navigation/nav_extract_routenames/home_screen.dart';
 // import 'package:cookbook_flutter/navigation/nav_extract_routenames/pass_screen.dart';
 // import 'package:cookbook_flutter/navigation/nav_extract_routenames/screen_arguments.dart';
-import 'package:cookbook_flutter/navigation/nav_return_data/selection_btn.dart';
+//import 'package:cookbook_flutter/navigation/nav_return_data/selection_btn.dart';
+import 'package:cookbook_flutter/navigation/nav_send_data/todo.dart';
+import 'package:cookbook_flutter/navigation/nav_send_data/todo_screen.dart';
 
 main() {
   // runApp(MaterialApp(
@@ -65,18 +65,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    //********************PASSING WHOLE MATERIAL APP********************
     //return SampleLongList();
 
-    //CUSTOM LISTVIEW
-    // return CustomListView(
-    //   items: List<ListItem>.generate(
-    //     1000,
-    //     (i) => i % 6 == 0
-    //         ? HeadingItem("Heading $i")
-    //         : MessageItem("Sender $i", "Message Body $i"),
-    //   ),
-    // );
-
+    //********************PASSING SCAFFOLD********************
     // return MaterialApp(
     //   title: appTitle,
     //   theme: ThemeData(
@@ -90,7 +82,17 @@ class MyApp extends StatelessWidget {
     //   ),
     // );
 
-    //SAMPLE ANIMATE NAVIGATE
+    //********************CUSTOM LISTVIEW********************
+    // return CustomListView(
+    //   items: List<ListItem>.generate(
+    //     1000,
+    //     (i) => i % 6 == 0
+    //         ? HeadingItem("Heading $i")
+    //         : MessageItem("Sender $i", "Message Body $i"),
+    //   ),
+    // );
+
+    //********************SAMPLE ANIMATE NAVIGATE**************
     // return MaterialApp(
     //   title: 'Navigation Basics',
     //   //home: FirstRoute(), //Comment this if using NavigationRoutes
@@ -105,8 +107,8 @@ class MyApp extends StatelessWidget {
     //   },
     // );
 
+    ///********************ADVANCE MATERIAL NAVIGATION********************
     /*
-    ///ADVANCE MATERIAL NAVIGATION
     ///Pass arguments to a named route
     return MaterialApp(
         // Provide a function to handle named routes. Use this function to
@@ -144,7 +146,7 @@ class MyApp extends StatelessWidget {
         });
     */
 
-    //RETURN DATA TO HOME
+    ///********************RETURN DATA TO HOME********************
     // return MaterialApp(
     //     title: 'Returning data',
     //     home: Scaffold(
@@ -154,7 +156,7 @@ class MyApp extends StatelessWidget {
     //       body: Center(child: SelectionButton()),
     //     ));
 
-    //SEND DATA TO HOME
+    //********************SEND DATA TO HOME********************
     return MaterialApp(
       title: 'Passing Data',
       home: TodosScreen(
