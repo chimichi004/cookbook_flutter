@@ -41,7 +41,8 @@ import 'package:google_fonts/google_fonts.dart';
 //import 'lists/list_longlist.dart';
 
 /*Navigation */
-import 'navigation/nav_hero/main_screen.dart';
+// import 'navigation/nav_hero/main_screen.dart';
+import 'navigation/nav_routes/first_route.dart';
 
 main() {
   // runApp(MaterialApp(
@@ -81,8 +82,8 @@ class MyApp extends StatelessWidget {
 
     //SAMPLE ANIMATE NAVIGATE
     return MaterialApp(
-      title: 'Transition Demo',
-      home: NavMainScreen(),
+      title: 'Navigation Basics',
+      home: FirstRoute(),
     );
   }
 }
