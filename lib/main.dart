@@ -1,4 +1,3 @@
-import 'package:cookbook_flutter/list/list_longlist.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 //import 'package:flutter/foundation.dart';
@@ -33,12 +32,16 @@ import 'package:google_fonts/google_fonts.dart';
 //import 'images/img_cache.dart';
 
 /*List */
-//import 'list/list_standard.dart';
-//import 'list/list_horizontal.dart';
-//import 'list/list_grid.dart';
-//import 'list/list_custom.dart';
-//import 'list/list_floating_appbar.dart';
-import 'list/list_horizontal.dart';
+//import 'lists/list_standard.dart';
+//import 'lists/list_horizontal.dart';
+//import 'lists/list_grid.dart';
+//import 'lists/list_custom.dart';
+//import 'lists/list_floating_appbar.dart';
+//import 'lists/list_horizontal.dart';
+//import 'lists/list_longlist.dart';
+
+/*Navigation */
+import 'navigation/nav_hero/main_screen.dart';
 
 main() {
   // runApp(MaterialApp(
@@ -52,7 +55,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return SampleLongList();
+    //return SampleLongList();
 
     // return CustomListView(
     //   items: List<ListItem>.generate(
@@ -75,5 +78,11 @@ class MyApp extends StatelessWidget {
     //     body: ImageDisplay(),
     //   ),
     // );
+
+    //SAMPLE ANIMATE NAVIGATE
+    return MaterialApp(
+      title: 'Transition Demo',
+      home: NavMainScreen(),
+    );
   }
 }
