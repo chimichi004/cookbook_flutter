@@ -1,3 +1,5 @@
+import 'package:cookbook_flutter/navigation/nav_send_data/todo.dart';
+import 'package:cookbook_flutter/navigation/nav_send_data/todo_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 //import 'package:flutter/foundation.dart';
@@ -65,6 +67,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     //return SampleLongList();
 
+    //CUSTOM LISTVIEW
     // return CustomListView(
     //   items: List<ListItem>.generate(
     //     1000,
@@ -141,13 +144,28 @@ class MyApp extends StatelessWidget {
         });
     */
 
+    //RETURN DATA TO HOME
+    // return MaterialApp(
+    //     title: 'Returning data',
+    //     home: Scaffold(
+    //       appBar: AppBar(
+    //         title: Text('Returning Data Demo'),
+    //       ),
+    //       body: Center(child: SelectionButton()),
+    //     ));
+
+    //SEND DATA TO HOME
     return MaterialApp(
-        title: 'Returning data',
-        home: Scaffold(
-          appBar: AppBar(
-            title: Text('Returning Data Demo'),
+      title: 'Passing Data',
+      home: TodosScreen(
+        todos: List.generate(
+          20,
+          (i) => Todo(
+            'Todo $i',
+            'A description of what needs to be done for Todo $i',
           ),
-          body: Center(child: SelectionButton()),
-        ));
+        ),
+      ),
+    );
   }
 }

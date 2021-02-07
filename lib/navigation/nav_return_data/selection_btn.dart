@@ -21,6 +21,7 @@ class SelectionButton extends StatelessWidget {
     // Navigator.pop on the Selection Screen.
     final result = await Navigator.push(
       context,
+      // Create the SelectionScreen in the next step.
       MaterialPageRoute(builder: (context) => SelectionScreen()),
     );
 
