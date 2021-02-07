@@ -42,7 +42,9 @@ import 'package:google_fonts/google_fonts.dart';
 
 /*Navigation */
 // import 'navigation/nav_hero/main_screen.dart';
-import 'navigation/nav_routes/first_route.dart';
+//import 'navigation/nav_routes/first_route.dart';
+import 'navigation/nav_name_routes/firstscreen.dart';
+import 'navigation/nav_name_routes/secondscreem.dart';
 
 main() {
   // runApp(MaterialApp(
@@ -83,7 +85,16 @@ class MyApp extends StatelessWidget {
     //SAMPLE ANIMATE NAVIGATE
     return MaterialApp(
       title: 'Navigation Basics',
-      home: FirstRoute(),
+      //home: FirstRoute(), //Comment this if using NavigationRoutes
+      // Start the app with the "/" named route. In this case, the app starts
+      // on the FirstScreen widget.
+      initialRoute: '/',
+      routes: {
+        // When navigating to the "/" route, build the FirstScreen widget.
+        '/': (context) => FirstScreen(),
+        // When navigating to the "/second" route, build the SecondScreen widget.
+        '/second': (context) => SecondScreen(),
+      },
     );
   }
 }
