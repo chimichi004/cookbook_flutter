@@ -54,7 +54,8 @@ import 'package:flutter/material.dart';
 // import 'package:cookbook_flutter/navigation/nav_send_data/todo_screen.dart';
 
 /*Networking */
-import 'networking/delete_data.dart';
+// import 'networking/delete_data.dart';
+import 'networking/fetch_data.dart';
 
 main() {
   // runApp(MaterialApp(
@@ -68,9 +69,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    //********************NETWORKING = PASSING WHOLE MATERIAL APP********************
+    //return DeleteAlbum();
+    return FetchData();
+    /**END FEB. 9, 2021 */
+
     //********************PASSING WHOLE MATERIAL APP********************
     //return SampleLongList();
-    return DeleteAlbum();
 
     //********************PASSING SCAFFOLD********************
     // return MaterialApp(
