@@ -33,6 +33,7 @@ dependencies:
   cached_network_image: ^2.5.0
   sentry_flutter: ^4.0.4
   http: ^0.12.2
+  web_socket_channel: ^1.2.0
 
 dev_dependencies:
   flutter_test:
