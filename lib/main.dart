@@ -57,7 +57,8 @@ import 'package:flutter/material.dart';
 // import 'networking/delete_data.dart';
 // import 'networking/fetch_data.dart';
 // import 'networking/auth_request.dart';
-import 'networking/parse_json.dart';
+// import 'networking/parse_json.dart';
+import 'networking/send_data.dart';
 
 main() {
   // runApp(MaterialApp(
@@ -73,8 +74,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     //********************NETWORKING = PASSING WHOLE MATERIAL APP********************
     //return DeleteAlbum();
-    return JsonParseIsolate();
-    /**END FEB. 9, 2021 */
+    //return JsonParseIsolate();
+    return SendDataDemo();
+    /**END FEB. 11, 2021 */
 
     //********************PASSING WHOLE MATERIAL APP********************
     //return SampleLongList();
