@@ -59,7 +59,11 @@ import 'package:flutter/material.dart';
 // import 'networking/auth_request.dart';
 // import 'networking/parse_json.dart';
 // import 'networking/send_data.dart';
-import 'networking/update_data.dart';
+// import 'networking/update_data.dart';
+//import 'networking/websocket.dart';
+
+/*Persistence */
+import 'persistence/read_write_files.dart';
 
 main() {
   // runApp(MaterialApp(
@@ -77,7 +81,21 @@ class MyApp extends StatelessWidget {
     //return DeleteAlbum();
     //return JsonParseIsolate();
     //return SendDataDemo();
-    return UpdateDataSample();
+    //return UpdateDataSample();
+    //final title = 'WebSocket Demo';
+    // return MaterialApp(
+    //   title: title,
+    //   home: SampleWebSocket(
+    //     title: title,
+    //     channel: IOWebSocketChannel.connect('ws://echo.websocket.org'),
+    //   ),
+    // );
+
+    //********************PERSISTENCE = READ & WRITE FILES********************
+    return MaterialApp(
+      title: 'Reading and Writing Files',
+      home: ReadWriteFiles(storage: CounterStorage()),
+    );
     /**END FEB. 11, 2021 */
 
     //********************PASSING WHOLE MATERIAL APP********************
