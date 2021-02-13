@@ -1,4 +1,3 @@
-import 'package:cookbook_flutter/persistence/store_key_value.dart';
 import 'package:flutter/material.dart';
 //import 'package:google_fonts/google_fonts.dart';
 //import 'package:flutter/foundation.dart';
@@ -65,20 +64,32 @@ import 'package:flutter/material.dart';
 
 /*Persistence */
 // import 'persistence/read_write_files.dart';
-import 'persistence/store_key_value.dart';
+//import 'persistence/store_key_value.dart';
 
-main() {
-  // runApp(MaterialApp(
-  //   home: MyApp(),
-  // ));
-  runApp(MyApp());
-}
+/*plugins */
+import 'plugins/video_controller.dart';
+
+main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   final appTitle = 'Sample Demo';
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    //********************PLUGINS = VIDEO CONTROLLER********************
+    return VideoPlayerScreen();
+    /**END FEB. 13, 2021 */
+
+    //********************PERSISTENCE = SHARED PREFERENCES********************
+    // return MaterialApp(
+    //   title: 'Shared preferences demo',
+    //   theme: ThemeData(primarySwatch: Colors.blue),
+    //   home: SampleSharedPreferences(
+    //     title: 'Shared preferences demo',
+    //   ),
+    // );
+    /**END FEB. 11, 2021 */
+
     //********************NETWORKING = PASSING WHOLE MATERIAL APP********************
     //return DeleteAlbum();
     //return JsonParseIsolate();
@@ -98,16 +109,6 @@ class MyApp extends StatelessWidget {
     //   title: 'Reading and Writing Files',
     //   home: ReadWriteFiles(storage: CounterStorage()),
     // );
-
-    //********************PERSISTENCE = SHARED PREFERENCES********************
-    return MaterialApp(
-      title: 'Shared preferences demo',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: SampleSharedPreferences(
-        title: 'Shared preferences demo',
-      ),
-    );
-    /**END FEB. 11, 2021 */
 
     //********************PASSING WHOLE MATERIAL APP********************
     //return SampleLongList();
