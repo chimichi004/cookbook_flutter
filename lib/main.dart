@@ -1,3 +1,4 @@
+import 'package:cookbook_flutter/persistence/store_key_value.dart';
 import 'package:flutter/material.dart';
 //import 'package:google_fonts/google_fonts.dart';
 //import 'package:flutter/foundation.dart';
@@ -63,7 +64,8 @@ import 'package:flutter/material.dart';
 //import 'networking/websocket.dart';
 
 /*Persistence */
-import 'persistence/read_write_files.dart';
+// import 'persistence/read_write_files.dart';
+import 'persistence/store_key_value.dart';
 
 main() {
   // runApp(MaterialApp(
@@ -92,9 +94,18 @@ class MyApp extends StatelessWidget {
     // );
 
     //********************PERSISTENCE = READ & WRITE FILES********************
+    // return MaterialApp(
+    //   title: 'Reading and Writing Files',
+    //   home: ReadWriteFiles(storage: CounterStorage()),
+    // );
+
+    //********************PERSISTENCE = SHARED PREFERENCES********************
     return MaterialApp(
-      title: 'Reading and Writing Files',
-      home: ReadWriteFiles(storage: CounterStorage()),
+      title: 'Shared preferences demo',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: SampleSharedPreferences(
+        title: 'Shared preferences demo',
+      ),
     );
     /**END FEB. 11, 2021 */
 
