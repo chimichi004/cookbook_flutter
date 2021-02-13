@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:camera/camera.dart';
+import 'package:flutter/material.dart';
 //import 'package:google_fonts/google_fonts.dart';
 //import 'package:flutter/foundation.dart';
 
@@ -67,17 +69,44 @@ import 'package:flutter/material.dart';
 //import 'persistence/store_key_value.dart';
 
 /*plugins */
-import 'plugins/video_controller.dart';
+//import 'plugins/video_controller.dart';
+import 'plugins/camera_controller.dart';
 
-main() => runApp(MyApp());
+//main() => runApp(MyApp());
+Future<void> main() async {
+  //********************PLUGINS = CAMERA CONTROLLER********************
+
+  // Ensure that plugin services are initialized so that `availableCameras()`
+  // can be called before `runApp()`
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Obtain a list of the available cameras on the device.
+  final cameras = await availableCameras();
+
+  // Get a specific camera from the list of available cameras.
+  final firstCamera = cameras.first;
+
+  runApp(
+    MaterialApp(
+      theme: ThemeData.dark(),
+      home: TakePictureScreen(
+        // Pass the appropriate camera to the TakePictureScreen widget.
+        camera: firstCamera,
+      ),
+    ),
+  );
+  /**END FEB. 13, 2021 */
+}
 
 class MyApp extends StatelessWidget {
   final appTitle = 'Sample Demo';
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    return Container();
     //********************PLUGINS = VIDEO CONTROLLER********************
-    return VideoPlayerScreen();
+    //return VideoPlayerScreen();
+    //return TakePictureScreen
     /**END FEB. 13, 2021 */
 
     //********************PERSISTENCE = SHARED PREFERENCES********************
